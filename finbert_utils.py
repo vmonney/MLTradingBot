@@ -1,11 +1,14 @@
 from transformers import AutoTokenizer, AutoModelForSequenceClassification
 import torch
-from typing import Tuple 
-device = "cuda:0" if torch.cuda.is_available() else "cpu"
+
+device = "mps" if torch.backends.mps.is_available() else "cpu"
 
 tokenizer = AutoTokenizer.from_pretrained("ProsusAI/finbert")
-model = AutoModelForSequenceClassification.from_pretrained("ProsusAI/finbert").to(device)
+model = AutoModelForSequenceClassification.from_pretrained("ProsusAI/finbert").to(
+    device
+)
 labels = ["positive", "negative", "neutral"]
+
 
 def estimate_sentiment(news):
     if news:
@@ -23,6 +26,11 @@ def estimate_sentiment(news):
 
 
 if __name__ == "__main__":
-    tensor, sentiment = estimate_sentiment(['markets responded negatively to the news!','traders were displeased!'])
+    tensor, sentiment = estimate_sentiment(
+        [
+            "markets responded positively to the news!",
+            "traders were pleasantly surprised!",
+        ]
+    )
     print(tensor, sentiment)
-    print(torch.cuda.is_available())
+    print(torch.backends.mps.is_available())

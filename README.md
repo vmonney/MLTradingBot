@@ -2,7 +2,7 @@
 Build a trader bot which looks at sentiment of live news events and trades appropriately. 
 
 ## See it live and in action 📺
-<img src="https://i.imgur.com/FaQH8rz.png"/>
+<img src="tradingbot.png"/>
 
 # Startup 🚀
 1. Create a virtual environment `conda create -n trader python=3.10` 
@@ -18,10 +18,10 @@ Build a trader bot which looks at sentiment of live news events and trades appro
 </br>
 # Other References 🔗
 
-<p>-<a href="github.com/Lumiwealth/lumibot)">Lumibot</a>:trading bot library, makes lifecycle stuff easier .</p>
+<p>-<a href="github.com/Lumiwealth/lumibot)">Lumibot</a>: trading bot library, makes lifecycle stuff easier .</p>
 
 # Who, When, Why?
 
-👨🏾‍💻 Author: Nick Renotte <br />
+👨🏾‍💻 Author: Valentin Monney <br />
 📅 Version: 1.x<br />
 📜 License: This project is licensed under the MIT License </br>
